@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-center align-items-center full-height">
+  <div class="login-box">
+    <form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div class="text-center mb-2">
+        <h4>Environment on Demand</h4>
+        <!--<img src="../../../assets/images/logo.png" style="width: 120px">-->
+      </div>
+
+      <!-- Error Panel -->
+      <div class="row">
+        <div class="input-field col s10 offset-s1" *ngIf="error !=''">
+          <!--<ngb-alert [type]="'danger'" class="mb-0-alert" (close)="resetError()"><span [innerHTML]="error"></span></ngb-alert>-->
+        </div>
+      </div>
+      <!-- /Error Panel -->
+
+      <div class="form-group"
+           [ngClass]="{'has-danger': loginForm.controls.email | isvalid: ['required', 'invalidEmail'], 'has-success': loginForm.controls.email.valid}">
+        <input id="email" name="email" autocomplete="off" placeholder="Username" type="text"
+               class="form-control form-control-lg "
+               [ngClass]="{'form-control-danger': loginForm.controls.email | isvalid: ['required', 'invalidEmail'], 'form-control-success': loginForm.controls.email.valid}"
+               formControlName="email">
+        <div *ngIf="loginForm.controls.email | isvalid: ['required']" class="form-control-feedback"
+             ng-message="required"> Username is mandatory. Please enter a value.
+        </div>
+        <div *ngIf="loginForm.controls.email | isvalid: ['invalidEmail']" class="form-control-feedback"
+             ng-message="required">Enter valid email address.
+        </div>
+      </div>
+
+      <div class="form-group"
+           [ngClass]="{'has-danger': loginForm.controls.password | isvalid: ['required'], 'has-success': loginForm.controls.password.valid}">
+        <input id="password" name="password" autocomplete="off" placeholder="Password" type="password"
+               class="form-control form-control-lg"
+               [ngClass]="{'form-control-danger': loginForm.controls.password | isvalid: ['required'], 'form-control-success': loginForm.controls.password.valid}"
+               formControlName="password">
+        <div *ngIf="loginForm.controls.password | isvalid: ['required']" class="form-control-feedback"
+             ng-message="required">Password is mandatory. Please enter a value.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button id="loginBtn" role="button" class="btn btn-block btn-submit" type="submit">Login</button>
+      </div>
+
+
+   <!--   <div class="form-group text-right">
+        <a role="button" [routerLink]="['/forgotpassword']">Forgot Password?</a>
+      </div>
+
+     <div class="form-group">
+        <label class="text-forget">Don't have an Account?</label>
+       <a role="button" [routerLink]="['/signup']">Sign Up Now</a>
+      </div> -->
+
+    </form>
+  </div>
+</div>

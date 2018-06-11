@@ -1,0 +1,383 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700;');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900;');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900;');
+// Import Variables
+@import 'variables';
+// 3rd Party Imports
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+
+// GLOBAL BASE TAG STYLES BEGIN
+// Setting base html properties
+html, body {
+  height: 100%;
+  font-size: 0.9rem;
+}
+
+// Setting Body Styles
+body {
+  background: #f7f7f7;
+  font-weight: normal;
+  background: linear-gradient(to right, $theme-dark1, $theme-light2, $theme-dark1) !important;
+  //background: url('../../assets/images/background.png');
+  background-size: cover;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+}
+
+// GLOBAL BASE TAG STYLES END
+
+// Button styles Begin
+
+.toast-success {
+  background-color: $bg-color3;
+  animation: slideIn 1500ms linear both;
+  transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out, right 0.5s ease-out;
+}
+
+.btn-primary {
+  display: inline-block;
+  cursor:pointer;
+  background-color: $brand-primary;
+  color: #FFF;
+  border-color: rgba(0, 0, 0, 0.01);
+  border: 2px solid $brand-primary;
+  text-decoration:none;
+  text-shadow:0px 1px 0px $brand-primary;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background: #027067;
+  border-color: #027067;
+}
+
+.btn-primary:focus, .btn-primary:disabled, .btn-primary:active, .btn-primary:visited {
+  background: #027067;
+  border-color: #027067;
+  box-shadow:inset 0 1px 0 0 #027067;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  height: 2.9rem;
+}
+
+.login__body select.form-control:not([size]):not([multiple]) {
+  padding: 0.75rem 1.5rem;
+  height: 3rem;
+}
+
+.form-inline .btn-primary {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.btn-social {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.btn-social > :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.btn-social.btn-lg {
+  padding-left: 61px
+}
+
+.btn-social.btn-lg > :first-child {
+  line-height: 45px;
+  width: 45px;
+  font-size: 1.8em
+}
+
+.btn-social-icon {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 34px;
+  width: 34px;
+  padding: 0
+}
+
+.btn-social-icon > :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.btn-social-icon.btn-lg {
+  padding-left: 61px
+}
+
+.btn-social-icon.btn-lg > :first-child {
+  line-height: 45px;
+  width: 45px;
+  font-size: 1.8em
+}
+
+.btn-social-icon > :first-child {
+  border: none;
+  text-align: center;
+  width: 100% !important
+}
+
+.btn-social-icon.btn-lg {
+  height: 45px;
+  width: 45px;
+  padding-left: 0;
+  padding-right: 0
+}
+
+.btn-google {
+  color: #fff !important;
+  text-align: center;
+  background-color: #dd4b39;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google:focus, .btn-google.focus {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google:hover {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google:active:hover, .btn-google.active:hover, .open > .dropdown-toggle.btn-google:hover, .btn-google:active:focus, .btn-google.active:focus, .open > .dropdown-toggle.btn-google:focus, .btn-google:active.focus, .btn-google.active.focus, .open > .dropdown-toggle.btn-google.focus {
+  color: #fff;
+  background-color: #a32b1c;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
+  background-image: none
+}
+
+.btn-google.disabled:hover, .btn-google[disabled]:hover, fieldset[disabled] .btn-google:hover, .btn-google.disabled:focus, .btn-google[disabled]:focus, fieldset[disabled] .btn-google:focus, .btn-google.disabled.focus, .btn-google[disabled].focus, fieldset[disabled] .btn-google.focus {
+  background-color: #dd4b39;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-google .badge {
+  color: #dd4b39;
+  background-color: #fff
+}
+
+.btn-submit {
+  display: block;
+  margin: 0 auto;
+  background-color: $brand-primary;
+  color: $white;
+  border-color: rgba(0, 0, 0, 0.01);
+  width: 100%;
+  padding: 11px;
+  //border: 2px solid #008e82;
+}
+
+.btn-submit:hover {
+  background: $brand-primary;
+  //border-color: #027067;
+}
+
+.social-icon {
+  padding: 5px 50px !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+// Button styles end
+
+// Form validation controls styles
+
+.ng-dirty.ng-invalid + .form-control-feedback {
+  color: $white;
+}
+
+// Login box styles
+
+.login-box {
+  background-color: rgba($black,.4);
+  box-shadow: 0 0 10px rgba($black,.3);
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 2px;
+  overflow: visible;
+
+  a {
+    color: $white;
+  }
+}
+
+// Login box styles ends
+
+.text-forget{
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: $white;
+
+  &:hover{
+    color: $white;
+  }
+}
+
+
+// tabs styles
+
+.tgo-tabset {
+
+  .nav-tabs {
+    border-bottom: none;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    justify-content: space-around !important;
+
+    .nav-link {
+      color: $color2;
+      border: none;
+      padding: 1.25rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .nav-link.active, .nav-item.show .nav-link {
+      position: relative;
+      background: 0 0;
+      border: none;
+      color: $color1;
+
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        bottom: 10px;
+        left: 0;
+        background: $border1;
+      }
+    }
+  }
+
+  .post-card {
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    box-shadow: 0 0 10px rgb(0,0,0);
+    border-radius: 8px;
+
+    .icon-container {
+      height: 100%;
+      padding: .625rem;
+
+      .icon img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.color-1 {
+  color: $color1;
+}
+
+.color-2 {
+  color: $color2;
+}
+
+.color-light1 {
+  color: $theme-light1;
+}
+
+.color-light2 {
+  color: $theme-light2;
+}
+
+.color-dark1 {
+  color: $theme-dark1;
+}
+
+
+.post-btn-panel {
+  color: $color3;
+  margin: 0;
+
+  a:hover {
+    text-decoration: underline !important;
+    color: $color4 !important;
+    font-weight: 600;
+  }
+}
+
+.modal {
+  background: rgba(0,0,0,.5);
+}
+
+.uploadMedia {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: 2px solid $theme-light2;
+  padding: 15px;
+  text-align: center;
+}
+
+.blue-border-radius {
+  border: 2px solid $color2 !important;
+}
+
+textarea {
+  resize: none;
+}
+
+.si-content {
+  min-width: 500px !important;
+  max-width: 650px !important;
+  max-height: 650px !important;
+  overflow: auto;
+}
