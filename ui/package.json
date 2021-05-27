@@ -28,7 +28,7 @@
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.10",
     "rxjs": "^6.0.0",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
